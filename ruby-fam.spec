@@ -30,7 +30,10 @@ Modu³ FAM dla Ruby.
 
 %build
 ruby extconf.rb 
-%{__make}
+%{__make} \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags} -fPIC"
+
 rdoc --ri -o ri
 rdoc -o rdoc
 
