@@ -1,4 +1,5 @@
 %define	ruby_archdir	%(ruby -r rbconfig -e 'print Config::CONFIG["archdir"]')
+%define	ruby_ridir	%(ruby -r rbconfig -e 'include Config; print File.join(CONFIG["datadir"], "ri", CONFIG["ruby_version"], "system")')
 %define	tarname			fam-ruby
 Summary:	FAM module for Ruby
 Summary(pl):	Modu³ FAM dla Ruby
@@ -30,22 +31,27 @@ Modu³ FAM dla Ruby.
 %build
 ruby extconf.rb 
 %{__make}
+rdoc --ri -o ri
+rdoc -o rdoc
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{ruby_archdir}
+install -d $RPM_BUILD_ROOT%{ruby_ridir}
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}
 
 %{__make} install \
 	archdir=$RPM_BUILD_ROOT%{ruby_archdir} \
 	sitearchdir=$RPM_BUILD_ROOT%{ruby_archdir}
 install %{SOURCE1}  $RPM_BUILD_ROOT%{_examplesdir}/%{name}
+cp -a ri/ri/* $RPM_BUILD_ROOT%{ruby_ridir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README*
+%doc README* rdoc
 %{ruby_archdir}/*
 %{_examplesdir}/*
+%{ruby_ridir}/*
