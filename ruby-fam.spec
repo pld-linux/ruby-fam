@@ -5,7 +5,7 @@ Summary:	FAM module for Ruby
 Summary(pl):	Modu³ FAM dla Ruby
 Name:		ruby-Fam
 Version:	0.1.4
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages
 Source0:	http://www.pablotron.org/download/%{tarname}-%{version}.tar.gz
