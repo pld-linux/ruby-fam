@@ -1,5 +1,3 @@
-%define	ruby_archdir	%(ruby -r rbconfig -e 'print Config::CONFIG["archdir"]')
-%define	ruby_ridir	%(ruby -r rbconfig -e 'include Config; print File.join(CONFIG["datadir"], "ri", CONFIG["ruby_version"], "system")')
 %define	tarname			fam-ruby
 Summary:	FAM module for Ruby
 Summary(pl):	Modu³ FAM dla Ruby
@@ -14,6 +12,7 @@ Source1:	http://www.pablotron.org/software/fam-ruby/examples/dirmon.rb
 # Source1-md5:	83ff885769efdb729df6899cd8d40c8c
 URL:		http://www.pablotron.org/software/fam-ruby/
 BuildRequires:	fam-devel
+BuildRequires:	rpmbuild(macros) >= 1.263
 BuildRequires:	ruby
 BuildRequires:	ruby-devel
 Requires:	ruby
@@ -29,7 +28,7 @@ Modu³ FAM dla Ruby.
 %setup -q -n %{tarname}-%{version}
 
 %build
-ruby extconf.rb 
+ruby extconf.rb
 %{__make} \
 	CC="%{__cc}" \
 	CFLAGS="%{rpmcflags} -fPIC"
