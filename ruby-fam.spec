@@ -3,7 +3,7 @@ Summary:	FAM module for Ruby
 Summary(pl):	Modu³ FAM dla Ruby
 Name:		ruby-Fam
 Version:	0.1.4
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Languages
 Source0:	http://www.pablotron.org/download/%{tarname}-%{version}.tar.gz
@@ -13,9 +13,9 @@ Source1:	http://www.pablotron.org/software/fam-ruby/examples/dirmon.rb
 URL:		http://www.pablotron.org/software/fam-ruby/
 BuildRequires:	fam-devel
 BuildRequires:	rpmbuild(macros) >= 1.263
-BuildRequires:	ruby
+BuildRequires:	ruby-modules
 BuildRequires:	ruby-devel
-Requires:	ruby
+Requires:	ruby-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
