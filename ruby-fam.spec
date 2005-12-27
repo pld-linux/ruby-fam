@@ -13,7 +13,6 @@ Source1:	http://www.pablotron.org/software/fam-ruby/examples/dirmon.rb
 URL:		http://www.pablotron.org/software/fam-ruby/
 BuildRequires:	fam-devel
 BuildRequires:	rpmbuild(macros) >= 1.263
-BuildRequires:	ruby-modules
 BuildRequires:	ruby-devel
 Requires:	ruby-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
