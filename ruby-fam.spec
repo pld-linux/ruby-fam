@@ -12,9 +12,9 @@ Source1:	http://www.pablotron.org/software/fam-ruby/examples/dirmon.rb
 # Source1-md5:	83ff885769efdb729df6899cd8d40c8c
 URL:		http://www.pablotron.org/software/fam-ruby/
 BuildRequires:	fam-devel
-BuildRequires:	rpmbuild(macros) >= 1.263
+BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-devel
-Requires:	ruby-modules
+%ruby_mod_ver_requires_eq
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
