@@ -1,6 +1,6 @@
 %define	tarname			fam-ruby
 Summary:	FAM module for Ruby
-Summary(pl):	Modu≥ FAM dla Ruby
+Summary(pl.UTF-8):   Modu≈Ç FAM dla Ruby
 Name:		ruby-Fam
 Version:	0.1.4
 Release:	4
@@ -20,8 +20,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 FAM module for Ruby.
 
-%description -l pl
-Modu≥ FAM dla Ruby.
+%description -l pl.UTF-8
+Modu≈Ç FAM dla Ruby.
 
 %prep
 %setup -q -n %{tarname}-%{version}
