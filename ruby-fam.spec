@@ -1,6 +1,6 @@
 %define	tarname			fam-ruby
 Summary:	FAM module for Ruby
-Summary(pl.UTF-8):   Moduł FAM dla Ruby
+Summary(pl.UTF-8):	Moduł FAM dla Ruby
 Name:		ruby-Fam
 Version:	0.1.4
 Release:	4
